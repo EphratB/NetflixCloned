@@ -1,0 +1,592 @@
+.tv-shows-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.side-menu-header{
+  color:#fff;
+}
+.side-menu {
+  background-color: #111;
+  width: 200px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu-header {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  margin-bottom: 0.5rem;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #FFF;
+  display: block;
+  padding: 0.5rem;
+}
+
+.nav-link a:hover {
+  text-decoration: underline;
+  color:#FFF;
+}
+
+.nav-link a.active {
+  background-color: #444;
+  color: #fff;
+}
+
+
+.tv-shows-content {
+  flex: 1;
+  overflow: auto;
+  color: #fff;
+  max-width:80%;
+}
+  
+  //////////////////////////////////// styles for movie cards ////////////////////////////
+  
+
+  .tvshows_posters {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  
+  }
+  
+  .movie_card {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 280px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #333;
+  }
+  
+  
+  .movie_card:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+  }
+  
+  .movie_card_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+  }
+  
+  .movie_card_overview {
+    margin: 2px;
+    font-size:12px;
+    color:#CCC;
+  }
+  
+  .movie_poster_button {
+    margin: 10px;
+  }
+  .movie_poster_button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .tvshows_posters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+
+  }
+
+  .movie_card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #444;
+    color: #fff;
+  }
+  .showDetail_card_vote_average svg {
+    width: 90px;
+    height: 90px;
+    margin-left: 10px;
+    fill: #FF3131;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+     
+    }
+    .showDetail_card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align items to the left */
+      justify-content: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .showDetail_card_title {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .showDetail_card_image {
+      width: 120vh;
+      height: 50vh;
+      margin-bottom: 20px;
+      text-align: center;
+      object-fit: contain;
+    }
+    
+    .showDetail_card_image img {
+      width: 120vh;
+      height: 50vh;
+      border-radius: 5px;
+    }
+    
+    .showDetail_card_vote_average {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Align to the left */
+      margin-bottom: 20px;
+    }
+    
+    .showDetail_card_vote_average svg {
+      width: 90px;
+      height: 90px;
+      margin-left: 10px;
+      fill: #FF3131;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-60%, -60%);
+    }
+    
+    .showDetail_card_vote_average svg text {
+      fill: #FFF;
+      font-weight: bold;
+    }
+    
+    .showDetail_card_overview {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-top: 10px;
+      max-width: 60%;
+      align-self: flex-start; /* Align to the left */
+    }
+    
+    .showDetail_card_language {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-top: 10px;
+      max-width: 60%;
+      align-self: flex-start; /* Align to the left */
+    }
+    
+    .showDetail_card_release_date {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-top: 10px;
+      max-width: 60%;
+      align-self: flex-start; /* Align to the left */
+    }
+    
+    .showDetail_card_vote_count {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-top: 10px;
+      max-width: 60%;
+      align-self: flex-start; /* Align to the left */
+    }
+    
+    
+}
+
+/* For screens between 600px and 960px */
+
+@media (min-width: 600px) and (max-width: 960px) {
+  .tvshows_posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+
+  }
+
+  .movie_card {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: auto;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #444;
+    color: #fff;
+  }
+  .showDetail_card_vote_average svg {
+    width: 90px;
+    height: 90px;
+    margin-left: 10px;
+    fill: #FF3131;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+     
+    }
+    .showDetail_card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align items to the left */
+      justify-content: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .showDetail_card_title {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .showDetail_card_image {
+      width: 120vh;
+      height: 50vh;
+      margin-bottom: 20px;
+      text-align: center;
+      object-fit: contain;
+    }
+    
+    .showDetail_card_image img {
+      width: 120vh;
+      height: 50vh;
+      border-radius: 5px;
+    }
+    
+    .showDetail_card_vote_average {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Align to the left */
+      margin-bottom: 20px;
+    }
+    
+    .showDetail_card_vote_average svg {
+      width: 90px;
+      height: 90px;
+      margin-left: 10px;
+      fill: orange;
+      position: absolute;
+      top: 72%;
+      left: 50%;
+      transform: translate(-60%, -60%);
+    }
+    
+    .showDetail_card_vote_average svg text {
+      fill: #FFF;
+      font-weight: bold;
+    }
+    
+    .showDetail_card_overview {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-top: 10px;
+      max-width: 60%;
+      align-self: flex-start; /* Align to the left */
+    }
+    
+    .showDetail_card_language {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-top: 10px;
+      max-width: 60%;
+      align-self: flex-start; /* Align to the left */
+    }
+    
+    .showDetail_card_release_date {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-top: 10px;
+      max-width: 60%;
+      align-self: flex-start; /* Align to the left */
+    }
+    
+    .showDetail_card_vote_count {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-top: 10px;
+      max-width: 60%;
+      align-self: flex-start; /* Align to the left */
+    }
+    
+}
+
+/* For screens larger than 960px */
+@media (min-width: 960px) {
+  .tvshows_posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  
+  }
+
+  .movie_card {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    height: auto;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #444;
+    color: #fff;
+  }
+  .showDetail_card_vote_average svg {
+    width: 90px;
+    height: 90px;
+    margin-left: 10px;
+    fill: blue;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+     
+  }
+  .showDetail_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .showDetail_card_title {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .showDetail_card_image {
+    width: 120vh;
+    height: 50vh;
+    margin-bottom: 20px;
+    text-align: center;
+    object-fit: contain;
+  }
+  
+  .showDetail_card_image img {
+    width: 120vh;
+    height: 50vh;
+    border-radius: 5px;
+  }
+  
+  .showDetail_card_vote_average {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left */
+    margin-bottom: 20px;
+  }
+  
+  .showDetail_card_vote_average svg {
+    width: 90px;
+    height: 90px;
+    margin-left: 10px;
+    fill: #FF3131;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+  }
+  
+  .showDetail_card_vote_average svg text {
+    fill: #FFF;
+    font-weight: bold;
+  }
+  
+  .showDetail_card_overview {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+    max-width: 60%;
+    align-self: flex-start; /* Align to the left */
+  }
+  
+  .showDetail_card_language {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+    max-width: 60%;
+    align-self: flex-start; /* Align to the left */
+  }
+  
+  .showDetail_card_release_date {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+    max-width: 60%;
+    align-self: flex-start; /* Align to the left */
+  }
+  
+  .showDetail_card_vote_count {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+    max-width: 60%;
+    align-self: flex-start; /* Align to the left */
+  }
+  
+  
+}
+
+.showDetail_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.showDetail_card_title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.showDetail_card_image {
+  width: 120vh;
+  height: 50vh;
+  margin-bottom: 20px;
+  text-align: center;
+  object-fit: contain;
+}
+
+.showDetail_card_image img {
+  width: 120vh;
+  height: 50vh;
+  border-radius: 5px;
+}
+
+.showDetail_card_vote_average {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+// .showDetail_card_vote_average svg {
+//   width: 90px;
+//   height: 90px;
+//   margin-left: 10px;
+//   fill: #FF3131;
+//   position: absolute;
+//   top: 81%;
+//   left: 50%;
+//   transform: translate(-60%, -60%);
+   
+//   }
+
+
+.showDetail_card_vote_average svg text {
+  fill: #FFF;
+  font-weight:bold;
+}
+
+.showDetail_card_overview {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-top: 10px;
+  max-width:60%;
+}
+.showDetail_card_language{
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-right: 565px;
+  max-width:60%;
+
+}
+.showDetail_card_release_date{
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-right: 520px;
+  max-width:60%;
+
+}
+.showDetail_card_vote_count{}
+
+.showDetail_card_overview p {
+  margin-top: 50px;
+}
+
+Link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+Link:hover {
+  text-decoration: underline;
+}
+
+
+////////////////////  styling for Link /////////////////
+
+p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+p a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+

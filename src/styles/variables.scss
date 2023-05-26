@@ -1,0 +1,47 @@
+$titie-font: "Roboto Serif", serif;
+$body-font: "Gloria Hallelujah", cursive;
+$name-font: "Kristi", cursive;
+
+$primarycolor: #b80257;
+$secondarycolor: #fae3d9;
+$text-color: #680747;
+$gray-color: #9e9ea4;
+$border-color: #f70776;
+$success-color: #0dc729;
+$danger-color: #ff0000;
+
+$minsize: 25px;
+$mikisize: 35px;
+$maxisize: 40px;
+
+@mixin breakpoint($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+}
+@mixin breakpoint-xsmall {
+  @include breakpoint(300px) {
+    @content;
+  }
+}
+@mixin breakpoint-small {
+  @include breakpoint(768px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-large {
+  @include breakpoint(1200px) {
+    @content;
+  }
+}
+
+@mixin size($minsize) {
+  font-size: $minsize;
+}
+@mixin size($mikisize) {
+  font-size: $mikisize;
+}
+@mixin size($maxisize) {
+  font-size: $maxisize;
+}

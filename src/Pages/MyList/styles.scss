@@ -1,0 +1,123 @@
+.container {
+    color: #fff;
+    margin-left: 9px;
+  }
+  
+  .movies-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .movie-card {
+    max-width: 20%;
+    margin: 10px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    position: relative; /* Set the position of the card to relative */
+  }
+  
+  .movie-card img {
+    width: 100%;
+    border-radius: 6px;
+   
+  }
+  
+  .movie-card h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .movie-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-card .like {
+    background-color: #fff;
+    color: #2f2f2f;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Set the position of the buttons to absolute */
+    bottom: 10px; /* Position the buttons at the bottom */
+    left: 20%; /* Move the buttons to the center */
+    transform: translateX(-50%); /* Center the buttons horizontally */
+  }
+  
+  .movie-card .dislike {
+    background-color: #fff;
+    color: #2f2f2f;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Set the position of the buttons to absolute */
+    bottom: 10px; /* Position the buttons at the bottom */
+    left: 80%; /* Move the buttons to the center */
+    transform: translateX(-50%); /* Center the buttons horizontally */
+  }
+  
+  .movie-card button:hover {
+    background-color: #ccc;
+  }
+  
+  .movie-card:last-child {
+    margin-right: 0;
+  }
+  
+  .rating-circle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rating-circle svg {
+    width: 4em;
+    height: 4em;
+    fill: #017562;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -60%);
+   
+  }
+  
+  .rating-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -70%);
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  
+
+
+  .delete_watched {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .delete_watched svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .delete_watched svg:hover {
+    fill: #e50914;
+  }
+  

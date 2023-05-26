@@ -1,0 +1,83 @@
+.row{
+  color:white;
+  margin-left:5px;
+}
+
+.row__posters{
+  display:flex;
+  overflow-y:hidden;
+  overflow-x:scroll;
+  padding:10px;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  object-fit: contain;
+  width: 140px;
+  //max-height: 225px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+
+.row__poster:hover{
+  transform: scale(1.08);
+}
+
+.addis_cinema__originals {
+  height: 400px;
+  width: 250px;
+  padding:4px;
+}
+
+.my-list-btn {
+  display: inline-block;
+  position: relative;
+  padding-right: 90px;
+ 
+}
+
+.my-list-btn p {
+ 
+  margin: 0;
+  margin-left: 20px;
+  font-size:15px;
+  color: white;
+}
+
+.my-list-btn > svg {
+  position: absolute;
+  top: 70%;
+  right:10;
+  transform: translateY(-50%);
+  fill: red !important;
+  width: 3em;
+  height: 1.5em;
+  cursor: pointer;
+}
+#svg{
+  fill: red !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .row__poster {
+    width: 200px;
+    max-height: 300px;
+  }
+  
+ 
+ 
+  
+}
+
+@media only screen and (min-width: 769px) {
+  .row__poster {
+    min-width: 50%;
+    max-height: 375px;
+  }
+  img.row__poster .netflix__originals  {
+    height: 350px;
+  }
+}
